@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 var _express = require("express");
 var _bodyParser = require("body-parser");
 
@@ -12,4 +14,6 @@ server.post("/log", function(req, res){
     return res.sendStatus(200);
 });
 
-server.listen(9988);
+server.listen(9988,function(){
+    console.log( "Listening on 9988" );
+});
