@@ -1,0 +1,15 @@
+var _express = require("express");
+var _bodyParser = require("body-parser");
+
+
+
+var server = _express();
+server.use(_bodyParser.text());
+
+server.post("/log", function(req, res){
+
+    console.log(req.body);
+    return res.sendStatus(200);
+});
+
+server.listen(9988);
